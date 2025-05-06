@@ -6,12 +6,12 @@
 #    By: meandrad <meandrad@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/05 19:17:04 by meandrad          #+#    #+#              #
-#    Updated: 2025/05/05 20:13:10 by meandrad         ###   ########.fr        #
+#    Updated: 2025/05/05 22:08:11 by meandrad         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = philo
-CFLAGS = cc -Wall -Wextra -Werror -g
+CFLAGS = cc -Wall -Wextra -Werror -g -pthread
 
 SRCS = \
 		philo.c \

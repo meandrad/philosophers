@@ -6,14 +6,13 @@
 /*   By: meandrad <meandrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/05 21:46:46 by meandrad          #+#    #+#             */
-/*   Updated: 2025/05/05 21:48:45 by meandrad         ###   ########.fr       */
+/*   Updated: 2025/05/05 22:07:52 by meandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PHILO
 # define PHILO
 
-
-
+#include <pthread.h>
 
 #endif 
