@@ -6,7 +6,7 @@
 #    By: meandrad <meandrad@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/05 19:17:04 by meandrad          #+#    #+#              #
-#    Updated: 2025/06/03 18:35:40 by meandrad         ###   ########.fr        #
+#    Updated: 2025/06/09 19:10:10 by meandrad         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,6 +15,7 @@ CFLAGS = cc -Wall -Wextra -Werror -g -lpthread
 
 SRCS = \
 		philo.c \
+		utils.c \
 		
 
 OBJS = $(SRC: .c=.o)
