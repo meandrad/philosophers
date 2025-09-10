@@ -6,27 +6,33 @@
 #    By: meandrad <meandrad@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/05 19:17:04 by meandrad          #+#    #+#              #
-#    Updated: 2025/06/09 19:10:10 by meandrad         ###   ########.fr        #
+#    Updated: 2025/09/09 22:27:37 by meandrad         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = philo
-CFLAGS = cc -Wall -Wextra -Werror -g -lpthread
+NAME    = philo
+CC      = cc
+CFLAGS  = -Wall -Wextra -Werror -g
+LDFLAGS = -lpthread
 
 SRCS = \
-		philo.c \
-		utils.c \
-		
+		data.c \
+		handle_forks.c \
+		handle_philos.c \
+		init.c \
+		main.c \
+		monitor.c \
+		utils.c
 
-OBJS = $(SRC: .c=.o)
+OBJS = $(SRCS:.c=.o)
 
 all: $(NAME)
 
-$(NAME) = $(OBJS)
-	$(CFLAGS) $(OBJS) -o $(NAME)
+$(NAME): $(OBJS)
+	$(CC) $(CFLAGS) $(OBJS) $(LDFLAGS) -o $(NAME)
 
 %.o: %.c
-	$(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 	rm -rf $(OBJS)
@@ -34,6 +40,6 @@ clean:
 fclean: clean
 	rm -rf $(NAME)
 
-re: fclean clean
+re: fclean all
 
 .PHONY: all clean fclean re
